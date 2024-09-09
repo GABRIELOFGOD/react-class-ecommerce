@@ -10,7 +10,7 @@ const Header = () => {
     <div className='flex justify-between sticky top-0 w-full overflow-hidden bg-black py-3 px-28 text-white '>
       <Link to='/'><p className='text-3xl font-bold'>Logo</p></Link>
       <ul className='my-auto flex gap-5'>
-        <Link to='/products'>Product</Link>
+        <Link to='/products'>Products</Link>
         <Link>About</Link>
         <Link>Contact</Link>
       </ul>

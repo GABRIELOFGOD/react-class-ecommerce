@@ -16,8 +16,8 @@ const Cart = ({cartShow, setCartShow}) => {
         </button>
       </div>
       <div className='flex flex-col px-3 overflow-auto py-6 gap-3'>
-        {cartItems.map((item) => (
-          <CartCard item={item} key={item.id} />
+        {cartItems.map((product) => (
+          <CartCard product={product} key={product.id} />
         ))}
       </div>
     </div>

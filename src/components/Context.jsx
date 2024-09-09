@@ -12,6 +12,7 @@ export const GlobalProductProvider = ({children}) => {
     fetch("https://fakestoreapi.com/products")
     .then((response)=> response.json())
     .then((data) => {
+      // console.log(data)
       setAllProducts(data)
     })
     .catch((error) => {
@@ -22,10 +23,15 @@ export const GlobalProductProvider = ({children}) => {
   function addProductToCart(product){
     setCartItems([...cartItems, product])
   }
-  
+
+  function deleteProductFromCart(product){
+    const newCartItem = cartItems.filter(item => item.id !== product.id);
+    setCartItems(newCartItem);
+    console.log(newCartItem);
+  }
   
   let objectState = {
-    allProducts, productsGetter, addProductToCart, cartItems
+    allProducts, productsGetter, addProductToCart, cartItems, deleteProductFromCart
   }
   
   return(
